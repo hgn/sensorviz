@@ -26,7 +26,7 @@ def draw_year_separator(ax, df_date_column):
 
 def draw(ax, daily, monthly, date_column, data_column, average_temp, title, unit, color):
     # Calculate the overall average temperature
-    line = ax.axhline(average_temp, color='gray', linestyle='dotted', label=title, alpha=.8, linewidth=1)
+    ax.axhline(average_temp, color='gray', linestyle='dotted', label=title, alpha=.8, linewidth=1)
 
     ax.plot(daily.index, daily.values, linestyle='-', color=color, alpha=.1, linewidth=3)
     ax.plot(monthly.index, monthly.values, marker='o', linestyle='-', color=color, markersize=8, linewidth=3)
